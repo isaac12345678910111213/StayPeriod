@@ -2,6 +2,8 @@ package ucr.ac.cr.StayPeriod.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Request {
@@ -9,7 +11,13 @@ public class Request {
     private Integer id;
     private String startDate;
     private String endDate;
+
+    @ManyToOne /*establecemos una relación de muchos a uno*/
+    @JoinColumn(name = "applicant_id") /*cambiamos el nombre que se muestra en la tabla*/
     private User applicant;
+
+    @ManyToOne
+    @JoinColumn(name = "rental_id")
     private Rental rental;
 
     public Request() {

@@ -2,14 +2,24 @@ package ucr.ac.cr.StayPeriod.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Publication {
     @Id
     private Integer id;
     private String publicationDate;
+    @ManyToOne  // ← AGREGAR ESTO
+    @JoinColumn(name = "publisher_id")
     private User publisher;
+
+    @ManyToOne  // ← AGREGAR ESTO
+    @JoinColumn(name = "rental_id")
     private Rental rental;
+
+    @ManyToOne  // ← AGREGAR ESTO
+    @JoinColumn(name = "request_id")
     private Request request;
 
     public Publication() {

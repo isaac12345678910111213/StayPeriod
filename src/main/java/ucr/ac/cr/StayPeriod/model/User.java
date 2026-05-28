@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "tb_usuario")
+@Table (name = "tb_usuarios")
 public class User {
     @Id
     private Integer id;

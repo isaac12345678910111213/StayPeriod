@@ -10,13 +10,13 @@ public class Rental {
     private String name;
     private String location;
     private Integer capacity; //capacidad por personas
-    private Integer price;
+    private Double price;
     private String details; // detalles de la vivienda/departamento
 
     public Rental() {
     }
 
-    public Rental(Integer id, String name, String location, Integer capacity, Integer price, String details) {
+    public Rental(Integer id, String name, String location, Integer capacity, Double price, String details) {
         this.id = id;
         this.name = name;
         this.location = location;
@@ -57,11 +57,11 @@ public class Rental {
         this.capacity = capacity;
     }
 
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
