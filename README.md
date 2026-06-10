@@ -106,36 +106,36 @@ Todas las solicitudes y respuestas utilizan formato JSON.
 
 | Método HTTP | Endpoint | Descripción |
 |------------|-----------|-------------|
-|-----Módulo de Autenticación----------|
-|POST| /api/auth/login → iniciar sesión
-|POST| /api/auth/register → registrar usuario
-|GET| /api/auth/profile → obtener perfil autenticado
-|-----Módulo de Usuarios---------------|
-|GET| /api/users → listar usuarios
-|GET| /api/users/{rol} → obtener usuario por rol
-|GET| /api/users/{id} → obtener usuario por ID
-|POST| /api/users → crear usuario
-|PUT| /api/users/{id} → actualizar usuario
-|DELETE| /api/users/{id} → eliminar usuario
-|------Módulo de Domicilio--------------|
-|GET| /api/ address → listar domicilios
-|GET| /api/ address /{id} → obtener espacio por ID
-|POST| /api/ address → crear domicilio
-|PUT| /api/ address /{id} → actualizar domicilio
-|DELETE| /api/ address /{id} → eliminar domicilio
-|-------Módulo de Solicitud-------------|
-|GET| /api/ application → listar solicitud
-|GET| /api/ application /{id} → obtener solicitud por ID
-|POST| /api/ application → crear solicitud
-|PUT| /api/ application /{id} → actualizar solicitud
-|DELETE| /api/ application /{id} → cancelar solicitud
-|-------Módulo de Publicación-----------|
-|GET| /api/ publication → listar publicaciones
-|GET|/api/ publication/{fecha} → obtener publicación por Fecha
-|GET| /api/ publication /{id} → obtener publicación por ID
-|POST| /api/ publication → crear publicación
-|PUT| /api/ publication /{id} → actualizar publicación
-|DELETE| /api/ publication /{id} → cancelar publicación
+Módulo de Autenticación
+|POST| /api/auth/login | iniciar sesión|
+|POST| /api/auth/register | registrar usuario|
+|GET| /api/auth/profile | obtener perfil autenticado|
+Módulo de Usuarios
+|GET| /api/users | listar usuarios|
+|GET| /api/users/{rol} | obtener usuario por rol|
+|GET| /api/users/{id} | obtener usuario por ID|
+|POST| /api/users | crear usuario|
+|PUT| /api/users/{id} | actualizar usuario|
+|DELETE| /api/users/{id} | eliminar usuario|
+Módulo de Domicilio
+|GET| /api/ address | listar domicilios|
+|GET| /api/ address /{id} | obtener espacio por ID|
+|POST| /api/ address | crear domicilio|
+|PUT| /api/ address /{id} | actualizar domicilio|
+|DELETE| /api/ address /{id} | eliminar domicilio|
+Módulo de Solicitud
+|GET| /api/ application | listar solicitud|
+|GET| /api/ application /{id} | obtener solicitud por ID|
+|POST| /api/ application | crear solicitud|
+|PUT| /api/ application /{id} | actualizar solicitud|
+|DELETE| /api/ application /{id} | cancelar solicitud|
+Módulo de Publicación
+|GET| /api/ publication | listar publicaciones|
+|GET|/api/ publication/{fecha} | obtener publicación por Fecha|
+|GET| /api/ publication /{id} | obtener publicación por ID|
+|POST| /api/ publication | crear publicación|
+|PUT| /api/ publication /{id} | actualizar publicación|
+|DELETE| /api/ publication /{id} | cancelar publicación|
 
 
 ## Manejo de Errores
