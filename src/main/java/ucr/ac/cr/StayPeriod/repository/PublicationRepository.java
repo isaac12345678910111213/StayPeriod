@@ -7,5 +7,5 @@ import ucr.ac.cr.StayPeriod.model.User;
 
 @Repository
 public interface PublicationRepository extends JpaRepository<Publication, Integer> {
-    Publication findPublicationByDate (String publicationDate);
+    Publication findPublicationByPublicationDate(String publicationDate);
 }

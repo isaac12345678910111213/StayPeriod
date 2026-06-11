@@ -12,7 +12,7 @@ import ucr.ac.cr.StayPeriod.service.PublicationService;
 import java.util.HashMap;
 import java.util.Map;
 
-@RequestMapping("api/user")
+@RequestMapping("api/publication")
 @RestController
 public class PublicationController {
     @Autowired

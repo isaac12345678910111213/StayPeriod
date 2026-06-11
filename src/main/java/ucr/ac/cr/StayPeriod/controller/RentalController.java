@@ -26,7 +26,7 @@ public class RentalController {
         return ResponseEntity.ok(service.findAll());
     }
 
-    @GetMapping("/id}")
+    @GetMapping("/{id}")
     public ResponseEntity <?> findById (@PathVariable Integer id){
         RentalDTO dto = this.service.findById(id);
         if(dto!= null){
