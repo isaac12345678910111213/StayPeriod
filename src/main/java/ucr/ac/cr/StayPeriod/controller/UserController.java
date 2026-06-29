@@ -104,6 +104,10 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    // ============================================
+    // LOGIN
+    // ============================================
+
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody LoginDTO dtoLogin,
                                    BindingResult result) {

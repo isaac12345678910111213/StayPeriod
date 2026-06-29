@@ -82,6 +82,10 @@ public class RentalController {
         return ResponseEntity.ok("Alquiler eliminado exitosamente");
     }
 
+    // ============================================
+    // ENDPOINTS DE BÚSQUEDA
+    // ============================================
+
     @GetMapping("/search/name")
     public ResponseEntity<?> searchByName(@RequestParam String name) {
         List<RentalDTO> dtos = this.service.searchByName(name);

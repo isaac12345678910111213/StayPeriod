@@ -1,33 +1,18 @@
 package ucr.ac.cr.StayPeriod.model;
 
-import jakarta.persistence.*;
-
-import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_usuarios")
+@Table (name = "tb_usuarios")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(name = "name", length = 150, nullable = false)
     private String name;
-
-    @Column(name = "email", length = 50, nullable = false, unique = true)
     private String email;
-
-    @Column(name = "password", length = 225, nullable = false)
     private String password;
-
-    @Column(name = "rol", length = 11, nullable = false)
     private String rol;
-
-    @OneToMany(mappedBy = "applicant")
-    private List<Request> requests;
-
-    @OneToMany(mappedBy = "owner")
-    private List<Rental> rentals;
 
     public User() {
     }
@@ -78,21 +63,5 @@ public class User {
 
     public void setRol(String rol) {
         this.rol = rol;
-    }
-
-    public List<Request> getRequests() {
-        return requests;
-    }
-
-    public void setRequests(List<Request> requests) {
-        this.requests = requests;
-    }
-
-    public List<Rental> getRentals() {
-        return rentals;
-    }
-
-    public void setRentals(List<Rental> rentals) {
-        this.rentals = rentals;
     }
 }

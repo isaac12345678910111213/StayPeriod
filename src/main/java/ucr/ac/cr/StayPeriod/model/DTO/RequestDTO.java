@@ -27,7 +27,6 @@ public class RequestDTO {
         this.request_status = status != null ? status : "PENDIENTE";
     }
 
-    // Getters y Setters
     public Integer getRequest_id() { return request_id; }
     public void setRequest_id(Integer request_id) { this.request_id = request_id; }
 
@@ -51,17 +50,4 @@ public class RequestDTO {
 
     public String getRequest_status() { return request_status; }
     public void setRequest_status(String request_status) { this.request_status = request_status; }
-
-    @Override
-    public String toString() {
-        return "Solicitud: " +
-                "\n request_id: " + request_id +
-                "\n request_startDate: " + request_startDate +
-                "\n request_endDate: " + request_endDate +
-                "\n request_applicant_id: " + request_applicant_id +
-                "\n request_applicant_name: " + request_applicant_name +
-                "\n request_rental_id: " + request_rental_id +
-                "\n request_rental_name: " + request_rental_name +
-                "\n request_status: " + request_status;
-    }
 }

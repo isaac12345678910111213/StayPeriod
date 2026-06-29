@@ -58,16 +58,4 @@ public class PublicationDTO {
     public void setPublication_request_id(Integer publication_request_id) {
         this.publication_request_id = publication_request_id;
     }
-
-    @Override
-    public String toString() {
-        return "Publicacion: " +
-                "\n publication_id: " + publication_id +
-                "\n publication_publicationDate: " + publication_publicationDate +
-                "\n publication_publisher_id: " + publication_publisher_id +
-                "\n publication_publisher_name: " + publication_publisher_name +
-                "\n publication_rental_id: " + publication_rental_id +
-                "\n publication_rental_name: " + publication_rental_name +
-                "\n publication_request_id: " + publication_request_id;
-    }
 }

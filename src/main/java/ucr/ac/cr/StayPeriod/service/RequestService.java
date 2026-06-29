@@ -141,6 +141,10 @@ public class RequestService {
         this.repository.deleteById(id);
     }
 
+    // ============================================
+    // MÉTODOS DE BÚSQUEDA Y ACCIONES
+    // ============================================
+
     public List<RequestDTO> findRequestsByApplicant(Integer applicantId) {
         List<Request> allRequests = this.repository.findAll();
         List<Request> filteredRequests = new ArrayList<>();

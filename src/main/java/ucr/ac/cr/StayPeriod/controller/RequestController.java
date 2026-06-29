@@ -82,6 +82,10 @@ public class RequestController {
         return ResponseEntity.noContent().build();
     }
 
+    // ============================================
+    // ENDPOINTS DE BÚSQUEDA Y ACCIONES
+    // ============================================
+
     @GetMapping("/applicant/{applicantId}")
     public ResponseEntity<?> findRequestsByApplicant(@PathVariable Integer applicantId) {
         List<RequestDTO> dtos = this.service.findRequestsByApplicant(applicantId);

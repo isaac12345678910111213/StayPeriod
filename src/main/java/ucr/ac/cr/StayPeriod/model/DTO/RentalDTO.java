@@ -48,17 +48,4 @@ public class RentalDTO {
 
     public String getRental_owner_name() { return rental_owner_name; }
     public void setRental_owner_name(String rental_owner_name) { this.rental_owner_name = rental_owner_name; }
-
-    @Override
-    public String toString() {
-        return "Alquiler: " +
-                "\n rental_id: " + rental_id +
-                "\n rental_name: " + rental_name +
-                "\n rental_location: " + rental_location +
-                "\n rental_capacity: " + rental_capacity +
-                "\n rental_price: " + rental_price +
-                "\n rental_details: " + rental_details +
-                "\n rental_owner_id: " + rental_owner_id +
-                "\n rental_owner_name: " + rental_owner_name;
-    }
 }
