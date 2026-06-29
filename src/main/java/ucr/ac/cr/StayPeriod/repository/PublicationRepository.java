@@ -5,7 +5,13 @@ import org.springframework.stereotype.Repository;
 import ucr.ac.cr.StayPeriod.model.Publication;
 import ucr.ac.cr.StayPeriod.model.User;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Repository
 public interface PublicationRepository extends JpaRepository<Publication, Integer> {
-    Publication findPublicationByPublicationDate(String publicationDate);
+    List<Publication> findByPublicationDate(LocalDate date);
+    List<Publication> findByPublisherId(Integer publisherId);
+    List<Publication> findByRentalId(Integer rentalId);
+    List<Publication> findByPublicationDateBetween(LocalDate start, LocalDate end);
 }

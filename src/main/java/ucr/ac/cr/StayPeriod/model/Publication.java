@@ -1,31 +1,33 @@
 package ucr.ac.cr.StayPeriod.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
+@Table(name = "tb_publications")
 public class Publication {
     @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String publicationDate;
-    @ManyToOne  // ← AGREGAR ESTO
+    @Column (name = "publication_date", nullable = false)
+    private LocalDate publicationDate;
+    @ManyToOne  //
     @JoinColumn(name = "publisher_id")
     private User publisher;
 
-    @ManyToOne  // ← AGREGAR ESTO
+    @ManyToOne  //
     @JoinColumn(name = "rental_id")
     private Rental rental;
 
-    @ManyToOne  // ← AGREGAR ESTO
+    @ManyToOne  //
     @JoinColumn(name = "request_id")
     private Request request;
 
     public Publication() {
     }
 
-    public Publication(Integer id, String publicationDate, User publisher, Rental rental, Request request) {
+    public Publication(Integer id, LocalDate publicationDate, User publisher, Rental rental, Request request) {
         this.id = id;
         this.publicationDate = publicationDate;
         this.publisher = publisher;
@@ -57,11 +59,11 @@ public class Publication {
         this.publisher = publisher;
     }
 
-    public String getPublicationDate() {
+    public LocalDate getPublicationDate() {
         return publicationDate;
     }
 
-    public void setPublicationDate(String publicationDate) {
+    public void setPublicationDate(LocalDate publicationDate) {
         this.publicationDate = publicationDate;
     }
 

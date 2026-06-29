@@ -4,22 +4,24 @@ public class UserDTO {
     private Integer user_id;
     private String user_name;
     private String user_rol;
+    private String user_email;
 
     public UserDTO() {
     }
 
-    public UserDTO(Integer id, String name, String rol) {
-        this.user_id = id;
-        this.user_name = name;
-        this.user_rol = rol;
+    public UserDTO(Integer user_id, String user_name, String user_rol, String user_email) {
+        this.user_id = user_id;
+        this.user_name = user_name;
+        this.user_rol = user_rol;
+        this.user_email = user_email;
     }
 
-    public Integer getId() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setId(Integer id) {
-        this.user_id = id;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getUser_name() {
@@ -38,12 +40,20 @@ public class UserDTO {
         this.user_rol = user_rol;
     }
 
+    public String getUser_email() {
+        return user_email;
+    }
+
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
+    }
+
     @Override
     public String toString() {
         return "Usuario: " +
                 "\n user_id: " + user_id +
                 "\n user_name: " + user_name +
-                "\n user_rol: " + user_rol
-                ;
+                "\n user_email: " + user_email +
+                "\n user_rol: " + user_rol;
     }
 }
