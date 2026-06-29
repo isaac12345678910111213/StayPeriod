@@ -120,10 +120,6 @@ public class RentalService {
         this.repository.deleteById(id);
     }
 
-    // ============================================
-    // MÉTODOS DE BÚSQUEDA
-    // ============================================
-
     public List<RentalDTO> searchByName(String name) {
         List<Rental> rentals = this.repository.findByNameContainingIgnoreCase(name);
         return this.convertListToDTO(rentals);
